@@ -27,7 +27,7 @@ const CustomTooltip = ({ active, payload }) => {
             <p className="text-sm text-muted-foreground">Income</p>
           </div>
 
-          <p className="text-sm text-right font-medium">
+          <p className="text-sm text-right font-medium dark:text-black">
             {formatCurrency(income)}
           </p>
         </div>
@@ -40,7 +40,7 @@ const CustomTooltip = ({ active, payload }) => {
             <div className="size-1.5 bg-rose-500 rounded-full" />
             <p className="text-sm text-muted-foreground">Expenses</p>
 
-            <p className="text-sm text-right font-medium">
+            <p className="text-sm text-right font-medium dark:text-black">
               {formatCurrency(expenses * -1)}
             </p>
           </div>
