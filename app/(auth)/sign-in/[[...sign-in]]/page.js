@@ -8,7 +8,7 @@ const SignInPage = () => {
          <div className='h-full lg:flex flex-col items-center justify-center px-4'>
             {/* text. */}
             <div className='text-center space-y-2 pt-8'>
-               <h1 className='font-bold text-3xl text-[#2E2A47]'>
+               <h1 className='font-bold text-3xl text-[#2E2A47] dark:text-white'>
                   Welcome Back!
                </h1>
                <p className='text-base text-[#7EBCA0]'>

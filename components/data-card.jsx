@@ -49,7 +49,7 @@ const DataCard = ({
   percentageChange = 0,
 }) => {
   return (
-    <Card className="border-none drop-shadow-lg">
+    <Card className="border-none drop-shadow-xl dark:shadow-white">
       <CardHeader className="flex flex-row items-center justify-between gap-x-4">
         {/* date and title. */}
         <div className="space-y-2">

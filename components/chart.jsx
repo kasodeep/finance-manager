@@ -30,7 +30,7 @@ const Chart = ({ data = [] }) => {
   }
 
   return (
-    <Card className="border-none drop-shadow-lg">
+    <Card className="border-none drop-shadow-xl dark:shadow-white">
       <CardHeader className="flex space-y-2 lg:space-y-0 lg:flex-row lg:items-center justify-between">
         {/* title. */}
         <CardTitle className="text-xl line-clamp-1">Transactions</CardTitle>

@@ -6,6 +6,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import SheetProvider from '@/providers/sheet-provider';
 import Provider from '@/providers/query-provider';
 import "./globals.css";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const space = Space_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -19,10 +20,16 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={space.className}>
+
           <Provider>
-            <SheetProvider />
-            <Toaster />
-            {children}
+            <ThemeProvider
+              attribute="class"
+              disableTransitionOnChange
+            >
+              <SheetProvider />
+              <Toaster />
+              {children}
+            </ThemeProvider>
           </Provider>
         </body>
       </html>

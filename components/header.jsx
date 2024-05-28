@@ -6,10 +6,11 @@ import Filters from './filters'
 import HeaderLogo from './header-logo'
 import Navigation from './navigation'
 import WelcomeMsg from './welcome-msg'
+import { ModeToggle } from './toggle-theme'
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-b from-blue-600 to-blue-400 px-4 py-8 lg:px-14 pb-36">
+    <header className="bg-gradient-to-b from-blue-600 to-blue-400 px-4 py-8 lg:px-14 pb-36 dark:bg-gradient-to-b dark:from-blue-800 dark:to-blue-600">
       <div className="max-w-screen-2xl mx-auto">
         <div className="w-full flex items-center justify-between mb-14">
           {/* logo and navbar. */}
@@ -21,7 +22,10 @@ const Header = () => {
           {/* logout button. */}
           <div className="flex items-center">
             <ClerkLoaded>
-              <UserButton afterSignOutUrl="/" />
+              <div className="flex items-center justify-center gap-x-3">
+                <UserButton afterSignOutUrl="/" />
+                <ModeToggle />
+              </div>
             </ClerkLoaded>
             <ClerkLoading>
               <Loader2 className="size-8 animate-spin text-slate-400" />
